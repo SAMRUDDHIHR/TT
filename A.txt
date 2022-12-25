@@ -1,0 +1,78 @@
+//simple interest
+#include <stdio.h>
+int main()
+{
+    float p,t,r,si;
+    printf("enter principle amount,time,rate of interest\n");
+    scanf("%f%f%f",&p,&t,&r);
+    si=(p*t*r)/100;
+    printf("simple interest:%f",si);
+    return 0;
+}
+
+//compound interest
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    float p,r,t,c;
+    printf("Enter principle amount: ");
+    scanf("%f", &p);
+    printf("Enter time: ");
+    scanf("%f", &t);
+    printf("Enter rate: ");
+    scanf("%f",&r);
+    c= p*(pow((1+r/100),t));
+    printf("Compound Interest = %f",c);
+    return 0;
+}
+
+//vowel or consonant
+#include <stdio.h>
+void main()
+{
+   char a;
+   printf("enter alphabet\n");
+   scanf("%c",&a);
+   if((a=='a'||a=='e'||a=='i'||a=='o'||a=='u')||(a=='A'||a=='E'||a=='I'||a=='O'||a=='U'))
+   printf("%c is vowel\n",a);
+   else
+   printf("%c is consonant\n",a);
+}
+
+//date validation                                                              
+#include <stdio.h>
+int main()
+{
+int d,m,y;
+printf("enter the date in dd/mm/yy format\n");
+scanf("%d%d%d",&d,&m,&y);
+if(y>=1947&&y<=2025)
+{
+    if(m>=1&&m<=12)
+    {
+        if((d>=1&&d<=31)&&(m==1||3||5||7||8||10||12))
+            printf("date is valid\n");
+        else if((d>=1&&d<=30)&&(m==4||6||9||11))
+            printf("date is valid\n");
+        else if((d>=1&&d<=28)&&(m==2))
+            printf("date is valid\n");
+        else if ((d==29&&m==2)&&(y%400==0||(y%100!=0||y%4==0)));
+            printf("date is valid\n");
+        else 
+           { 
+               printf("day is invalid\n");
+    }
+        
+    }
+    else
+    {
+        printf("month  is invalid\n ");
+    }
+}
+else
+{
+     printf("year is invalid\n ");
+}
+return 0;
+}
