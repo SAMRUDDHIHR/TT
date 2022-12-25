@@ -1,0 +1,36 @@
+//hour to min
+#include<stdio.h>
+void main()
+{ 
+    int h,m;
+    printf("enter total hours and minutes\n");
+    scanf("%d%d",&h,&m);
+    h=h*60;
+    h=h+m;
+    printf("total minutes:%d",h);
+}
+
+//km to mile
+#include<stdio.h>
+void main()
+{ 
+    float k,m;
+    printf("enter total kilometers\n"); 
+    scanf("%f",&k);
+    m=k*0.621371;
+    printf("total miles:%f",m);
+}
+
+/toggle
+#include<stdio.h>
+void main()
+{ 
+    char a;
+    printf("enter character\n");
+    scanf("%c",&a);
+    if(a>='a'&&a<='z')
+        a=a-32;
+    else
+        a=a+32;
+    printf("toggle:%c\n",a);
+}

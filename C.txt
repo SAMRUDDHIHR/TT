@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include<stdlib.h>
+int main()
+{
+    float a,b,res;
+    char op;
+    printf("enter expression\n");
+    scanf("%f%c%f",&a,&op,&b);
+    switch(op)
+    {
+        case'+':res=a+b;
+                break;
+        case'-':res=a-b;
+                break;
+        case'*':res=a*b;
+                break;
+        case'/':if(b==0)
+                printf("invalid\n");       
+                else
+                res=a/b;
+                break;
+        default:printf("invalid\n");
+                break;
+    }
+    printf("result:%f",res);
+}
+
+//multiple5
+#include<stdio.h>
+void main()
+{
+    int n,p;
+    printf("enter the number\n");
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++)
+    {
+        p=5*i;
+    }
+    printf("multiple of 5 upto %d:%d",n,p);
+}
+
+//uppercase
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+    char s[100];
+    printf("enter a string in lowercase\n");
+    scanf("%s",s);
+    for(int i=0;i<strlen(s);i++)
+    {
+        s[i]=s[i]-32;
+    }
+    printf("string in uppercase:%s",s);
+}
+
+//lowercase
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+    char s[100];
+    printf("enter a string in uppercase\n");
+    scanf("%s",s);
+    for(int i=0;i<strlen(s);i++)
+    {
+        s[i]=s[i]+32;
+    }
+    printf("string in lowercase:%s",s);
+} 
+    
+    

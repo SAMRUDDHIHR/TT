@@ -1,0 +1,56 @@
+//scalene
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+    float s1,s2,ia,area;
+    printf("enter side1,side2,inclined angle\n");
+    scanf("%f%f%f",&s1,&s2,&ia);
+    area=(s1*s2*sin((3.14/180)*ia))/2;
+    printf("result:%f",area);
+}
+
+//sum &avg
+#include<stdio.h>
+void main()
+{ 
+    float a,b,c,sum,avg;
+    printf("enter three numbers\n");
+    scanf("%f%f%f",&a,&b,&c);
+    sum=a+b+c;
+    avg=sum/3;
+    printf("sum:%f\taverage:%f\n",sum,avg);
+}
+
+//centigrade to fahrenheit
+#include<stdio.h>
+void main()
+{
+    float c,f;
+    printf("enter temparature in centigrade\n");
+    scanf("%f",&c);
+    f=(c*9/5)+32;
+    printf("temperature in fahrenheit:%f",f);
+}
+
+//volume sphere
+#include<stdio.h>
+void main()
+{ 
+    float r,v;
+    printf("enter radius\n");
+    scanf("%f",&r);
+    v=(4/3.0)*3.14*r*r*r;
+    printf("volume of sphere:%f",v);
+}
+
+//perimeter rectangle
+#include<stdio.h>
+void main()
+{ 
+    float h,w,p;
+    printf("enter height and width\n");
+    scanf("%f%f",&h,&w);
+    p=h*w;
+    printf("perimeter of rectangle=%f",p);
+}
