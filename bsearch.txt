@@ -1,0 +1,20 @@
+#include <stdio.h>
+int compare(const void*x,const void*y)
+{
+    return*(int*)x-*(int*)y;
+}
+int main()
+{
+    int a[]={1,2,3,4,5,6};
+    int size=sizeof(a)/sizeof(a[0]);
+    int key,result;
+    printf("enter the element to be searched\n");
+    scanf("%d",&key);
+    result=bsearch(&key,a,size,sizeof(a[0]),compare);
+    if(result)
+     printf("FOUND");
+     else
+    printf("NOT FOUND");
+
+    return 0;
+}
