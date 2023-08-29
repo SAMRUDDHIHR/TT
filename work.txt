@@ -1,0 +1,334 @@
+//months
+#include <stdio.h>
+void main()
+{
+    int m;
+    printf("enter month in integer\n");
+    scanf("%d",&m);
+    if(m==1||m==3||m==5||m==7||m==8||m==10||m==12)
+    printf("month have 31 days\n");
+    else if(m==4||m==6||m==9||m==11)
+    printf("month have 30 days\n");
+    else if(m==2)
+    printf("month have 28 days\n");
+    else
+    printf("invalid month\n");
+}
+
+//biggest 0f 4
+#include <stdio.h>
+int main()
+{
+    int a,b,c,d;
+    printf("enter numbers\n");
+    scanf("%d%d%d%d",&a,&b,&c,&d);
+    (a>b&&a>c&&a>d)?printf("biggest:%d",a):(b>c&&c>d)?printf("biggest:%d",b):
+    (c>d)?printf("biggest:%d",c):printf("biggest:%d",d);
+    return 0;
+}
+
+//digit to word
+#include<stdio.h>
+int main()
+{
+	 long int n,rem,rev=0;
+	 printf("Enter number: ");
+	 scanf("%ld",&n);
+	 while(n!=0)
+	 {
+		  rem=n%10;
+		  rev=rev*10+rem;
+		  n=n/10;
+	 }
+	 while(rev!=0)
+	 {
+		 rem = rev%10;
+		  switch(rem)
+		  {
+			   case 0: printf("Zero "); break;
+			   case 1: printf("One "); break;
+			   case 2: printf("Two "); break;
+			   case 3: printf("Three "); break;
+			   case 4: printf("Four "); break;
+			   case 5: printf("Five "); break;
+			   case 6: printf("Six "); break;
+			   case 7: printf("Seven "); break;
+			   case 8: printf("Eight "); break;
+			   case 9: printf("Nine "); break;
+		  }
+		  rev = rev/10;
+	 }
+	 return(0);
+}
+
+//temperature
+#include<stdio.h>
+void main()
+{
+    float t;
+    printf("enter temperature in centigrade\n");
+    scanf("%f",&t);
+    if(t<0)
+    printf("freezing weather\n");
+    else if(t>=0&&t<10)
+    printf("very cold weather\n");
+    else if(t>=10&&t<20)
+    printf("cold weather\n");
+    else if(t>=20&&t<30)
+    printf("normal in temp\n");
+    else if(t>=30&&t<40)
+    printf("its hot\n");
+    else if(t>=40)
+    printf("its very hot\n");
+}
+
+//triangle
+#include <stdio.h>
+void main()
+{
+    int a,b,c;
+    printf("enter three sides of triangle\n");
+    scanf("%d%d%d",&a,&b,&c);
+    (a==b&&b==c)?printf("equilateral triangle\n"):
+    ((a==b&&b!=c)||(a==c&&c!=b)||(b==c&&c!=a))?printf("isoceles triangle\n"):printf("scalene triangle\n");
+}
+
+//price
+#include<stdio.h>
+int main()
+{
+    int n,p=1;
+    printf("enter the value of N\n");
+    scanf("%d",&n);
+    while(n!=0)
+    {
+       int r=n%10;
+       p=p*r;
+       n=n/10;
+    }
+    printf("Price is=%d\n",p);
+    return 0;
+}
+//ischar
+#include <stdio.h>
+void main()
+{
+    char a;
+    printf("enter character\n");
+    scanf("%c",&a);
+    ((a>='a'&&a<='z')||(a>='A'&&a<='Z'))?
+    printf("%c is character\n",a):
+    printf("%c is not character\n",a);
+}
+//washing machine
+#include <stdio.h>
+int main()
+{
+    int w;
+    printf("enter the weight in grams\n");
+    scanf("%d",&w);
+    (w>=0&&w<=2000)?printf("Time estimated=25 min\n"):
+    (w>2000&&w<=4000)?printf("Time estimated=35 min\n"):
+    (w>4000&&w<=7000)?printf("Time estimated=45 min\n"):
+    (w>7000)?printf("OVERLOAD\n"):printf("INVALID INPUT\n");
+    return 0;
+}
+//bill
+#include<stdio.h>
+void main()
+{
+    int n,d,t;
+    printf("enter the bill amount\n");
+    scanf("%d",&n);
+    if(n<5000)
+    {
+        printf("no discount\n");
+    }
+    if(n>=5000&&n<=10000)
+    {
+        d=n/10;
+    }
+    if(n>10000&&n<=50000)
+    {
+        d=n/20;
+    }
+    if(n>50000&&n<=100000)
+    {
+        d=n/30;
+    }
+    if(n>100000)
+    {
+        d=n/40;
+    }
+    t=n-d;
+    printf("Bill amount %d\nDiscount %d\ntotal amount=%d",n,d,t);
+}
+//marks
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+    int r,p,c,a,t;
+    float g;
+    char s[30];
+    printf("enter the name:\t");
+    scanf("%s",s);
+    printf("enter the roll no:\t");
+    scanf("%d",&r);
+    printf("enter marks in physics,chemistry,computer application\n");
+    scanf("%d%d%d",&p,&c,&a);
+    t=p+c+a;
+    g=t/3;
+    printf("Roll no=%d\n",r);
+    printf("Name=%s\n",s);
+    printf("physics=%d\n",p);
+    printf("chemistry=%d\n",c);
+    printf("computer application=%d\n",a);
+    printf("Total=%d\n",t);
+    printf("percentage=%f\n",g);
+    if(g>80)
+    printf("distinction\n");
+    else if(g>60)
+    printf("first division\n");
+    else if(g>50)
+    printf("second division\n");
+    else if(g>40)
+    printf("third division\n");
+    else printf("fail\n");
+}
+//#%cat
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+    char a[5],b[5],c[5];
+    int i,j;
+    printf("enter first word in small letters\n");
+    scanf("%s",a);
+    printf("enter second word in small letters\n");
+    scanf("%s",b);
+    printf("enter thirdvword in small letters\n");
+    scanf("%s",c);
+    for(i=0;i<strlen(a);i++)
+    {
+        if(a[i]=='a'||a[i]=='e'||a[i]=='i'||a[i]=='o'||a[i]=='u')
+        a[i]='%';
+    }
+    for(i=0;i<strlen(b);i++)
+    {
+        if(b[i]!='a'||b[i]!='e'||b[i]!='i'||b[i]!='o'||b[i]!='u')
+        b[i]='#';
+    }
+    //strupr(c);
+    strcat(a,b);
+    printf("%s\n",a);
+}
+//wheels
+#include <stdio.h>
+int main()
+{
+    int v,w,i,f,t;
+    printf("enter number of vehicles\n");
+    scanf("%d",&v);
+    printf("enter number of wheels\n");
+    scanf("%d",&w);
+    if(w%2==0&&v<w&&w>=2)
+    {
+        i=w/2;
+        if(i>v)
+        {
+            f=i-v;
+            t=v-f;
+            printf("four wheeler=%d\n",f);
+            printf("two wheeler=%d\n",t);
+        }
+        else
+        printf("not possible\n");
+    }
+    else
+        printf("not possible\n");
+    return 0;
+}
+//denomination
+#include<stdio.h>
+void main()
+{
+    int n,r,q;
+    printf("enter amount\n");
+    scanf("%d",&n);
+    r=n%2000;
+    if(r==0||r!=n)
+    {q=n/2000;
+    printf("2000*%d\n",q);
+    }
+    n=r;
+    r=n%500;
+    if(r==0||r!=n)
+    {q=n/500;
+    printf("500*%d\n",q);
+    }
+    n=r;
+    r=n%200;
+    if(r==0||r!=n)
+    {q=n/200;
+    printf("200*%d\n",q);
+    }
+    n=r;
+    r=n%100;
+    if(r==0||r!=n)
+    {q=n/100;
+    printf("100*%d\n",q);
+    }
+    n=r;
+    r=n%50;
+    if(r==0||r!=n)
+    {q=n/50;
+    printf("50*%d\n",q);
+    }
+    n=r;
+    r=n%20;
+    if(r==0||r!=n)
+    {q=n/20;
+    printf("20*%d\n",q);
+    }
+    n=r;
+    r=n%10;
+    if(r==0||r!=n)
+    {q=n/10;
+    printf("10*%d\n",q);
+    }
+    n=r;
+    r=n%5;
+    if(r==0||r!=n)
+    {q=n/5;
+    printf("5*%d\n",q);
+    }
+    n=r;
+    r=n%1;
+    if(r==0||r!=n)
+    {q=n/1;
+    printf("1*%d\n",q);
+    }
+}
+//eligible
+#include<stdio.h>
+void main()
+{
+    int m,p,c,t,s;
+    printf("Physics:");
+    scanf("%d",&p);
+    printf("Chemistry:");
+    scanf("%d",&c);
+    printf("Mathematics:");
+    scanf("%d",&m);
+    t=m+c+p;
+    s=m+c;
+    if((m>=65&&p>=55&&c>=50)&&(t>=190||s>=140))  
+    {
+        printf("The candidate is eligible\n");
+    }
+    else
+    {
+        printf("The candidate is not eligible\n");
+    }
+}
